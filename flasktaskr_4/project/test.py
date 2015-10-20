@@ -1,5 +1,5 @@
 # import os
-import os
+"""import os
 import unittest
 from views import app,db
 from _config import basedir
@@ -139,7 +139,7 @@ class AllTests(unittest.TestCase):
         self.app.get('tasks/',follow_redirects=True)
         response=self.app.post('add/', data=dict(
         name='Go to the bank',
-        due_dta='',
+        due_date='',
         priority='1',
         posted_date='02/05/2014',
         status='1'
@@ -160,7 +160,7 @@ class AllTests(unittest.TestCase):
         self.login('Michael','python')
         self.app.get('tasks/',follow_redirects=True)
         self.create_task()
-        response=self.app.get("delete/1",follow_redirects=True)
+        response=self.app.get("delete/1/",follow_redirects=True)
         self.assertIn(b'The task was deleted.',response.data)
 
 
@@ -178,4 +178,4 @@ class AllTests(unittest.TestCase):
 
 
 if __name__=='__main__':
-    unittest.main()
+    unittest.main()"""

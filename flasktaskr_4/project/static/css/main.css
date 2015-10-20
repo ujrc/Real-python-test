@@ -1,7 +1,6 @@
 body{
-  padding: 60px 0;
   font-family: sans-serif;
-  background: #ffffff;
+  background: #eee;
   }
   a,h1,h2 {
     color: #377BA8;
@@ -55,7 +54,7 @@ body{
       .error {
         background: #F0D6D6;
         padding: 0.5em;
-            }
+      }
       .datagrid table{
         border-collapse: collapse;
         text-align: left;
@@ -109,7 +108,4 @@ body{
       color: red;
       font-size: .8em;
       background-color: #FFFFFF;
-    }
-    .footer{
-      padding-top: 30px;
     }
