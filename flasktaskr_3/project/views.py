@@ -50,8 +50,8 @@ def login():
                 flash('Welcome!')
                 return redirect(url_for('tasks'))
             else:
-                error='Invalid username or password'
-        
+                error='Invalid username or password.'
+
     return render_template('login.html', form=form, error=error)
 
 
