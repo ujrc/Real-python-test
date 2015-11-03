@@ -1,0 +1,7 @@
+env
+Venv
+*.pyc
+__pycache__
+*.DS_Store
+htmlcov
+/.coverage
