@@ -101,7 +101,7 @@ def new_task():
             )
             db.session.add(new_task)
             db.session.commit()
-            flash('New entry was successfully posted. Thanks.')
+            flash('New entry was successfully posted.Thanks.')
             return redirect(url_for('tasks'))
         else:
             flash('All fieds are required.')
