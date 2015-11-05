@@ -1,8 +1,9 @@
+# project/__init__.py
+import datetime
 from flask import Flask
 from flask.ext.bcrypt import Bcrypt
 from flask.ext.sqlalchemy import SQLAlchemy
 
-import datetime
 from flask import Flask, render_template, request
 
 app=Flask(__name__)
@@ -12,12 +13,13 @@ db=SQLAlchemy(app)
 
 from project.users.views import users_blueprint
 from project.tasks.views import tasks_blueprint
+from project.api.views import api_blueprint
 
-#register Blueprint
+#register Blueprinthost='0.0.0.0',port=port
 
 app.register_blueprint(users_blueprint)
 app.register_blueprint(tasks_blueprint)
-
+app.register_blueprint(api_blueprint)
 @app.errorhandler(404)
 def not_found(error):
     if app.debug is not True:
@@ -27,7 +29,6 @@ def not_found(error):
             current_timestamp=now.strftime("%d-%m-%Y %H:%M:%S")
             f.write("\n404 error at {}:{}".format(current_timestamp,r))
     return render_template('404.html'),404
-
 @app.errorhandler(500)
 def internal_error(error):
     db.session.rollback()
