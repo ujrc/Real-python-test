@@ -1,7 +1,0 @@
-env
-Venv
-*.pyc
-*.DS_Store
-__pycache__
-.coverage
-htmlcov
